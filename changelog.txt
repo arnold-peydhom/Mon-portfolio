@@ -1,9 +1,6 @@
-Version: 4.9.2
+Version: 4.9.1
   - Updated Bootstrap to version 5.2.2
   - Updated all outdated third party vendor libraries to their latest versions
-
-Version: 4.9.1
-  - Fixed mobile menu toggle button displaying issue
 
 Version: 4.9.0
   - Updated Bootstrap to version 5.2.1
@@ -61,7 +58,7 @@ Version: 4.0.0
 Version: 3.0.0
   - Initial release with Bootstrap v5.0 Beta 1
 
-Version: 2.2.0
+Version: 2.1.0
   - Updated Bootstrap to version 4.5.3
   - Updated all outdated third party vendor libraries to their latest versions
   - Updated the PHP Email Form to v2.3
@@ -69,8 +66,8 @@ Version: 2.2.0
 
 Version: 2.1.0
   - Updated the PHP Email Form library to version 2.0 with reCaptcha support
-  - Added smooth scroll on page load with hash links in the url
   - Updated all outdated third party vendor libraries to their latest versions
+  - Other small fixes and improvements
   
 Version: 2.0.0
   - The template was rebuilt from scratch with the latest Bootstrap version (4.5.0)
