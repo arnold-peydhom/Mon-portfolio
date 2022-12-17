@@ -1,41 +1,45 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+    require_once(__DIR__.'../vendor/autoload.php');
+    use \Mailjet\Resources;
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'arnoldpeydhom276@gmail.com';
+    define('API_USER', 'f3108d76f1fa09692b19f062e79c84a0');
+    define('API_LOGIN', 'c90f23b95e1166eedf504d4c0afb60a2');
+    $mj = new \Mailjet\Client(API_USER,API_LOGIN,true,['version' => 'v3.1']);
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
+  if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['message'])){
+      $name = htmlspecialchars($_POST['name']);
+      $email = htmlspecialchars($_POST['email']);
+      $message = htmlspecialchars($_POST['message']);
+
+      if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $body = [
+          'Messages' => [
+            [
+              'From' => [
+                'Email' => "arnoldpeydhom276@gmail.com",
+                'Name' => "arnold"
+              ],
+              'To' => [
+                [
+                  'Email' => "arnoldpeydhom276@gmail.com",
+                  'Name' => "arnold"
+                ]
+              ],
+              'Subject' => "Greetings from Mailjet.",
+              'TextPart' => "$name,$email,$message",
+            ]
+          ]
+        ];
+        $response = $mj->post(Resources::$Email, ['body' => $body]);
+        $response->success();
+        echo("Email envoyer avec succes !");
+        
+      }else{
+        echo('email non disponible');
+      }
   }
-
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
+  else{
+    header('Location:../contact.html');
+    die();
+  }
 ?>
