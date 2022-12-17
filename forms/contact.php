@@ -6,9 +6,10 @@
     define('API_LOGIN', 'c90f23b95e1166eedf504d4c0afb60a2');
     $mj = new \Mailjet\Client(API_USER,API_LOGIN,true,['version' => 'v3.1']);
 
-  if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['message'])){
+  if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['message'])){
       $name = htmlspecialchars($_POST['name']);
       $email = htmlspecialchars($_POST['email']);
+      $subject = htmlspecialchars($_POST['subject']);
       $message = htmlspecialchars($_POST['message']);
 
       if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -26,7 +27,7 @@
                 ]
               ],
               'Subject' => "Greetings from Mailjet.",
-              'TextPart' => "$name,$email,$message",
+              'TextPart' => "$name,$email,$subject,$message",
             ]
           ]
         ];
