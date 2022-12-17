@@ -6,7 +6,7 @@
     define('API_LOGIN', 'c90f23b95e1166eedf504d4c0afb60a2');
     $mj = new \Mailjet\Client(API_USER,API_LOGIN,true,['version' => 'v3.1']);
 
-  if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['message'])){
+  if(!empty($_POST['send'])){
       $name = htmlspecialchars($_POST['name']);
       $email = htmlspecialchars($_POST['email']);
       $subject = htmlspecialchars($_POST['subject']);
@@ -34,6 +34,8 @@
         $response = $mj->post(Resources::$Email, ['body' => $body]);
         $response->success();
         echo("Email envoyer avec succes !");
+        header('Location:../contact.html');
+
         
       }else{
         echo('email non disponible');
