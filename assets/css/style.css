@@ -148,7 +148,7 @@ h6 {
 }
 
 .police{
-  font-family: 'Creepster', cursive;
+  font-family: 'Rye', cursive;
   background: linear-gradient(to right,#49cbbb,#000000);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -163,10 +163,7 @@ h6 {
 }
 
 .name{
-  font-family: 'Creepster', cursive;
-  background: linear-gradient(to left,#49cbbb,#000000);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  font-family: 'Rye', cursive;
 }
 #header .logo {
   font-size: 32px;
