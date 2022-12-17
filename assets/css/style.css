@@ -154,6 +154,14 @@ h6 {
   -webkit-background-clip: text;
 }
 
+/*font*/
+.font{
+  font-family: 'Caveat Brush', cursive;
+  background: linear-gradient(to right,#49cbbb,#000000);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
 .name{
   font-family: 'Creepster', cursive;
   background: linear-gradient(to left,#49cbbb,#000000);
