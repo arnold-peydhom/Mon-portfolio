@@ -152,6 +152,7 @@ h6 {
   background: linear-gradient(to right,#49cbbb,#000000);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  font-size: 25px;
 }
 
 /*font*/
@@ -1335,4 +1336,8 @@ section {
 
 #footer .credits a {
   color: #34b7a7;
+}
+
+.mail{
+  margin-left: 8%;
 }

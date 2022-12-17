@@ -34,7 +34,7 @@
         $response = $mj->post(Resources::$Email, ['body' => $body]);
         $response->success();
         echo("Email envoyer avec succes !");
-        header('Location:../contact.html');
+        header('Location:../Contact.html');
 
         
       }else{
