@@ -511,7 +511,7 @@ h6 {
   #hero:before {
     content: "";
     background: rgba(255, 255, 255, 0.5);
-    background-attachment: none;
+    background-attachment:fixed;
     position: absolute;
     bottom: 0;
     top: 0;
