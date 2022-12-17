@@ -200,10 +200,6 @@ h6 {
   font-size: 16px;
 }
 
-.header-social-links a:hover {
-  color: #34b7a7;
-}
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -514,7 +510,8 @@ h6 {
 @media (max-width: 992px) {
   #hero:before {
     content: "";
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.5);
+    background-attachment: none;
     position: absolute;
     bottom: 0;
     top: 0;
