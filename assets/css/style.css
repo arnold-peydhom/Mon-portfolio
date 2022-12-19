@@ -638,6 +638,13 @@ section {
   color: #555555;
 }
 
+#aboutt{
+  height: 100%;
+  width: 85%;
+  margin-left: 8%;
+  border-radius: 15px;
+}
+
 .about .content ul {
   list-style: none;
   padding: 0;
