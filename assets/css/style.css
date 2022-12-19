@@ -146,9 +146,9 @@ h6 {
   z-index: 997;
   padding: 15px 0;
 }
-
+/**/
 .police{
-  font-family: 'Rye', cursive;
+  font-family: 'Hanalei Fill', cursive;
   background: linear-gradient(to right,#49cbbb,#000000);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -164,7 +164,7 @@ h6 {
 }
 
 .name{
-  font-family: 'Rye', cursive;
+  font-family: 'Pacifico', cursive;
 }
 #header .logo {
   font-size: 32px;
